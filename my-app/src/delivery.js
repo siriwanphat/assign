@@ -6,7 +6,6 @@ import { Container, Col, Row} from 'reactstrap';
 const delivery = (props) => {
   return (
     <Container>
-    <Row>
     <div>
     <Row>
       <p>List Based</p>
@@ -30,6 +29,8 @@ const delivery = (props) => {
         <Col xs="6">
       <Input type="textarea" name="text" id="routpickup" placeholder="Pick up Location" />
       <Input type="textarea" name="text" id="routdropoff" placeholder="Drop off Location" />
+        </Col>
+        <Col xs="6">.col-6
         </Col>
       </Row>
     </FormGroup>
@@ -56,7 +57,6 @@ const delivery = (props) => {
       </FormGroup>
       <Button>Submit</Button>
     </Form>
-    </Row>
     </Container>    
   );
 }
