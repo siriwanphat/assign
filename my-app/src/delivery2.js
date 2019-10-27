@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 
-const delivery2 = (props) => {
+const Delivery2 = (props) => {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
@@ -60,4 +60,4 @@ const delivery2 = (props) => {
   );
 }
 
-export default delivery2;
+export default Delivery2;
