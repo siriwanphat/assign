@@ -1,56 +1,63 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+import React from 'react';
+import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Col, Row} from 'reactstrap';
 
 const delivery = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
+    <Container>
+    <Row>
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
+    <Row>
+      <p>List Based</p>
+    </Row>
+    <Row>
+      <Nav>
+        <NavItem>
+          <NavLink href="#">Place order</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">Track status</NavLink>
+        </NavItem>
+      </Nav>
+    </Row>
+      <hr />
     </div>
+    <Form>
+    <FormGroup>
+      <Label for="rout">ROUT</Label>
+      <Row>
+        <Col xs="6">
+      <Input type="textarea" name="text" id="routpickup" placeholder="Pick up Location" />
+      <Input type="textarea" name="text" id="routdropoff" placeholder="Drop off Location" />
+        </Col>
+      </Row>
+    </FormGroup>
+    <Label for="service">ADDITIONAL SERVICES</Label>
+    <FormGroup check>
+      <Row>
+        <Label check>
+          <Input type="checkbox" />{' '}
+          Purchase Service
+        </Label>
+      </Row>
+      <Row>
+        <Label check>
+          <Input type="checkbox" />{' '}
+          Round Trip
+        </Label>
+      </Row>
+      <Row>
+        <Label check>
+          <Input type="checkbox" />{' '}
+          Food Delivery
+        </Label>
+      </Row>
+      </FormGroup>
+      <Button>Submit</Button>
+    </Form>
+    </Row>
+    </Container>    
   );
 }
 
