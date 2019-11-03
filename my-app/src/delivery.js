@@ -6,7 +6,9 @@ import {
   Card, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody
 } from 'reactstrap';
+import { Media } from 'reactstrap';
 
+const WalkingIcon = require('./walking.png');
 const delivery = (props) => {
   return (
     <Container>
@@ -21,14 +23,24 @@ const delivery = (props) => {
         </NavItem>
       </Nav>
     </Row>
-      <hr />
+    <hr />
     </div>
+    <Col>
+    <div className="p-3 bg-info my-2 rounded">
+      <Toast>
+        <Col xs={6} md={4}>
+        <img src={WalkingIcon} />
+        </Col>
+          
+        </Toast>
+      </div>
+    </Col>
     <Form>
     <FormGroup>
     <Col>
       <Row>
       <Col xs="6">
-      <Label for="rout">ROUT</Label>
+      <Label for="rout">ROUTE</Label>
       </Col>
       <Col xs="6">
       <Label for="rout">Delivery Info</Label>
